@@ -1,0 +1,39 @@
+winodws 安装 atx-server
+
+    来源：https://testerhome.com/topics/11588
+
+    1、安装go 语言及rethinkdb
+        go：https://golang.org/dl/
+        rethinkdb：http://www.runoob.com/go/go-environment.html
+
+    2、安装 atx-server
+        go get -v github.com/openatx/atx-server
+
+    3、build atx-server
+        winodws下路径：C:\Users\gc\go\src\github.com\openatx\atx-server
+            go build
+
+    4、启动rethinkdb 和 atx-server
+        分别添加环境变量
+        rethinkdb : rethinkdb --http-port 8090
+        atx-server: atx-server --port 8000              ps:不确定是否需要到atx-server的路径下再执行
+        此时，atx-server web 地址就可以访问了： 127.0.0.1:8000  或者 电脑ip：8000
+
+    5、安装 uiautomator2
+        a. 先安装至电脑上
+            pip install -U --pre uiautomator2
+        b. 安装至手机
+            1.usb 连接手机： python -m uiautomator2 init
+            2.wifi 连接手机：    python -m uiautomator2 init {电脑IP:8000}
+
+    6、访问
+        127.0.0.1:8000  或者 电脑ip：8000
+
+    特殊情况说明：
+        1、手机连接上之后，状态显示busy              解决办法：  ctrl+双击鼠标
+        2、小心防火墙及安全软件干扰
+        3、
+
+
+
+
